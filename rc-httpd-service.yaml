@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: httpd
+    tier: frontend
+  name: rc-httpd-service
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+    nodePort: 30084
+  selector:
+    app: httpd
+    tier: frontend
+  type: NodePort
+status:
+  loadBalancer: {}

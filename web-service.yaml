@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: nginx
+    tier: frontend
+  name: web-service
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+    nodePort: 30082
+  selector:
+    app: nginx
+    tier: frontend
+  type: NodePort
