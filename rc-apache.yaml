@@ -6,6 +6,7 @@ metadata:
     app: httpd
     tier: frontend
 spec:
+  replicas: 3
   template:
     metadata: 
       name: httpd-pod
@@ -19,4 +20,3 @@ spec:
           ports:
             - containerPort: 80
               protocol: TCP
-              
