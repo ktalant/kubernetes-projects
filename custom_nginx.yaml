@@ -6,12 +6,12 @@ metadata:
     app: nginx
     tier: frontend
 spec:
-  - containers:
-      name: nginx-container
-      image: nginx
-      ports:
-        - containerPort: 80
-          protocol: TCP
+  containers:
+  - name: nginx-container
+    image: nginx
+    ports:
+      - containerPort: 80
+        protocol: TCP
 
 
 
