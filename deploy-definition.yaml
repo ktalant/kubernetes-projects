@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: test-nginx
+  name: test-nginx
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      run: test-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: test-nginx
+    spec:
+      containers:
+      - image: nginx
+        name: test-nginx
+        resources:
+          requests:
+            cpu: "0.1"
+            memory: 0.2Gi
+          limits:
+            cpu: "0.5"
+            memory: 0.6Gi
+
+status: {}
