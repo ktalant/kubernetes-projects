@@ -27,7 +27,7 @@ spec:
           preferredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
               - matchExpressions:
-                  - key: role
-                    operator: In
-                    values:
-                      - worker3
+                - key: role
+                  operator: In
+                  values:
+                    - worker3
