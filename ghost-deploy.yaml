@@ -3,22 +3,19 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    run: ghost
+    app: ghost
   name: ghost
 spec:
   replicas: 4
   selector:
     matchLabels:
-      run: ghost
-  strategy: {}
+      app: ghost
   template:
     metadata:
       creationTimestamp: null
       labels:
-        run: ghost
+        app: ghost
     spec:
       containers:
       - image: ghost:alpine
         name: ghost
-        resources: {}
-status: {}
