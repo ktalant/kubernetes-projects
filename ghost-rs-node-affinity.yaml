@@ -24,10 +24,10 @@ spec:
           name: ghost-alpine-container
       affinity:
         nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingRequiredDuringExecution:
             nodeSelectorTerms:
               - matchExpressions:
                   - key: role
                     operator: In
                     values:
-                      - worker1
+                      - worker3
