@@ -28,4 +28,4 @@ spec:
             nodeSelectorTerms:
               - matchExpressions:
                   - key: role
-                    operator: Exists
+                    operator: Exist
