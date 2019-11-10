@@ -19,13 +19,16 @@ spec:
         app: ghost
         env: qa
     spec:
-      containers:
-        - image: ghost:alpine
-          name: ghost-alpine-container
       affinity:
         nodeAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
               - key: role
-                operator: Exists
+                operator: In
+                values:
+                - worker3
+      containers:
+        - image: ghost:alpine
+          name: ghost-alpine-container
+      
