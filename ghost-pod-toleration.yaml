@@ -11,3 +11,10 @@ spec:
       value: "qa"
       operator: "Equal"
       effect: "NoExecute"
+
+  containers:
+    - image: ghost:alpine
+      name: ghost-alpine-container
+
+      
+  
