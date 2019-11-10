@@ -24,7 +24,7 @@ spec:
           name: ghost-alpine-container
       affinity:
         nodeAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
+          requiredDuringSchedulingIgnoredDuringExectuion:
             nodeSelectorTerms:
               - matchExpressions:
                 - key: role
