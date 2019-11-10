@@ -26,8 +26,8 @@ spec:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExectuion:
             nodeSelectorTerms:
-              - matchExpressions:
-                - key: role
-                  operator: In
-                  values:
-                    - worker3
+            - matchExpressions:
+              - key: role
+                operator: In
+                values:
+                - worker3
