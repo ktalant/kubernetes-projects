@@ -28,6 +28,4 @@ spec:
             nodeSelectorTerms:
               - matchExpressions:
                   - key: role
-                    operator: In
-                    values:
-                      - worker3
+                    operator: Exists
