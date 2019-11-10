@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+  name: ghost-rs-nodeaffinity
+  labels:
+    app: ghost
+    tier: frontend
+    env: qa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ghost
+      env: qa
+  template:
+    metadata:
+      name: ghost-rs-pod
+      labels:
+        app: ghost
+        env: qa
+    spec:
+      containers:
+        - image: ghost:alpine
+          name: ghost-alpine-container
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: role
+                    operator: In
+                    values:
+                      - worker1
