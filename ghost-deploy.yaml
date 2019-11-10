@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: ghost
+  name: ghost
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      run: ghost
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: ghost
+    spec:
+      containers:
+      - image: ghost:alpine
+        name: ghost
+        resources: {}
+status: {}
