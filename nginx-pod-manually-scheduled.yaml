@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx-pod-manual-scheduled
+  name: nginx-pod-manual-scheduled
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: nginx-pod-manual-scheduled
+  template:
+    metadata:
+      labels:
+        run: nginx-pod-manual-scheduled
+    spec:
+      containers:
+      - image: nginx
+        name: nginx-pod-manual-scheduled
+        
+      nodeName: gke-jaska-cluster-default-pool-5a53025e-qzf0  
