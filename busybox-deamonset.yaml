@@ -21,7 +21,7 @@ spec:
           command: ['/bin/sh','-c']
           args:
             - sleep 
-            - 1000
+            - "1000"
           resources:
             requests:
               cpu: 0.1 
