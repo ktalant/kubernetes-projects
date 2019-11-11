@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: busybox-daemonset
+  labels:
+    app: busybox
+    tier: agent
+spec:
+  selector:
+    matchLabels:
+      app: busybox-daemon
+  template:
+    metadata:
+      labels:
+        name: busybox-pod-deamon
+        app: busybox-daemon
+    spec:
+      containers:
+        - image: busybox
+          name: busybox-container
+          args:
+            - sleep 1000
+          resources:
+            requests:
+              cpu: 0.1 
+              memory: "128Mi"
+            limits:
+              cpu: 0.2
+              memory: "256Mi"
+              
