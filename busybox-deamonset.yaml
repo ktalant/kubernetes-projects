@@ -18,7 +18,7 @@ spec:
       containers:
         - image: busybox
           name: busybox-container
-          commands:
+          command:
             - bash
             - -c
             - sleep "1000"
