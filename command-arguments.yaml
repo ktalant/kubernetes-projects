@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: centos-sleeper-pod
+  labels:
+    app: ubuntu
+spec:
+  containers:
+    - image: ktalant/centos:v1
+      name: sleeper-container
+      args: 
+        - 1000
