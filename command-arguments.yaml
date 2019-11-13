@@ -6,7 +6,7 @@ metadata:
     app: ubuntu
 spec:
   containers:
-    - image: ktalant/centos:v1
+    - image: busybox
       name: sleeper-container
-      args: 
-        - 1000
+      commands: ["/bin/sh","-c"]
+      args: ["sleep","1000"]
